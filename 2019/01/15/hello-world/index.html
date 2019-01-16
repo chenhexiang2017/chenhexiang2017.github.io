@@ -86,7 +86,7 @@
 <meta property="og:image" content="http://yoursite-url/images/image2.png">
 <meta property="og:image" content="http://yoursite-url/images/image3.png">
 <meta property="og:image" content="http://yoursite-url/images/image4.png">
-<meta property="og:updated_time" content="2019-01-16T02:57:18.581Z">
+<meta property="og:updated_time" content="2019-01-16T04:47:32.617Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo安装使用">
 <meta name="twitter:description" content="什么是hexo? Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。既然如此便捷，那下面我们开始安装使用吧！ 准备环境 说明：本人使用的主机是centos7.3  安装node.js ，输入node -v 和 npm -v会正确显示出版本号  安装git，安装完成后在命令提示符中输入git --vers">
@@ -201,6 +201,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-归档">
           <a href="/archives/" rel="section">
             
@@ -274,6 +284,11 @@
         
 
         <div class="post-meta">
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color="7D26CD">置顶</font>
+            <span class="post-meta-divider">|</span>
+          
           <span class="post-time">
             
               <span class="post-meta-item-icon">
@@ -417,9 +432,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/centOS/" rel="tag"># centOS</a>
+            <a href="/tags/centOS/" rel="tag"><i class="fa fa-tag"></i> centOS</a>
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
           
         </div>
       
@@ -438,7 +453,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/15/hexo-theme-beantech/" rel="prev" title="[Hexo] Theme BeanTech">
+              <a href="/2019/01/15/hexo-theme-beantech/" rel="prev" title="[Hexo] Theme BeanTech">
                 [Hexo] Theme BeanTech <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -529,10 +544,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -540,10 +555,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">4</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -599,7 +614,9 @@
       
 
       
-
+      <div id="music163player">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=41656941&auto=1&height=66"></iframe>
+      </div>
     </div>
   </aside>
 
@@ -806,6 +823,12 @@
 
   
   <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
   
 </body>
 </html>
