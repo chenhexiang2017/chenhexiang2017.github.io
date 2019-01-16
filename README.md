@@ -1,108 +1,24 @@
-> Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
-> 
-> This BeanTech theme created by [YuHsuan](http://beantech.org) modified from the original Porter [Kaijun](http://kaijun.rocks/hexo-theme-huxblog/)
-
-# [Live Demo](http://beantech.org)
-![BeanTech Desktop](http://beantech.org/img/beantech-desktop.png)
-
-# Usage
-I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customiz your own blog!
-
-Let's begin!!!
-
-## Init
-```bash
-git clone https://github.com/YenYuHsuan/hexo-theme-beantech.git ./hexo-beantech
-cd hexo-beantech
-npm install
 ```
+*新电脑中的环境搭建*
 
-## Modify
-Modify `_config.yml` file with your own info.
-Especially the section:
-### Deployment
-Replace to your own repo!
-```yml
-deploy:
-  type: git
-  repo: https://github.com/<yourAccount>/<repo>
-  branch: <your-branch>
-```
+这部分应该要简单一点，如果你已经搭建过一个hexo博客的话。
 
-### Sidebar settings
-Copy your avatar image to `<root>/img/` and modify the `_config.yml`:
-```yml
-sidebar: true    # whether or not using Sidebar.
-sidebar-about-description: "<your description>"
-sidebar-avatar: img/<your avatar path>
-```
-and activate your personal widget you like
-```yml
-widgets:         # here are widget you can use, you can comment out
-- featured-tags
-- short-about
-- recent-posts
-- friends-blog
-- archive
-- category
-```
-if you want to add sidebar widget, please add at `layout/_widget`.
-### Signature Setup
-Copy your signature image to `<root>/img/signature` and modify the `_config.yml`:
-```yml
-signature: true   # show signature
-signature-img: img/signature/<your-signature-ID>
-```
-### Go to top icon Setup
-My icon is using iron man, you can change to your own icon at `css/image`.
+新电脑上安装node.js和git。不赘述。git相关教程推荐廖雪峰老师的git教程，突然想到最近很火的考研神嘴张雪峰老师是什么鬼，哈哈哈。
 
-### Post tag
-You can decide to show post tags or not.
-```yml
-home_posts_tag: true
-```
-![home_posts_tag-true](./source/_posts/hexo-theme-beantech/home_posts_tag-true.png)
-```yml
-home_posts_tag: false
-```
-![home_posts_tag-false](./source/_posts/hexo-theme-beantech/home_posts_tag-false.png)
+安装hexo：npm install -g hexo-cli。
 
-### Markdown render
-My markdown render engine plugin is [hexo-renderer-markdown-it](https://github.com/celsomiranda/hexo-renderer-markdown-it).
-```yml
-# Markdown-it config
-## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
-markdown:
-  render:
-    html: true
-    xhtmlOut: false
-    breaks: true
-    linkify: true
-    typographer: true
-    quotes: '“”‘’'
-```
-and if you want to change the header anchor 'ℬ', you can go to `layout/post.ejs` to change it.
-```javascript
-async("//cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
-        anchors.options = {
-          visible: 'hover',
-          placement: 'left',
-          icon: 'ℬ'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-```
+clone远程仓库到本地 git clone git@github.com:username/username.github.io.git。
 
-## Hexo Basics
-Some hexo command:
-```bash
-hexo new post "<post name>" # you can change post to another layout if you want
-hexo clean && hexo generate # generate the static file
-hexo server # run hexo in local environment
-hexo deploy # hexo will push the static files automatically into the specific branch(gh-pages) of your repo!
+根据packge.json安装依赖npm install。
+
+本地生成网站并开启博客服务器：hexo g & hexo s。如果一切正常，此时打开浏览器输入http://localhost:4000/已经可以看到博客正常运行了。
+
+*在两台电脑上的同步操作*
+
+至此，迁移工作已完成，在两台电脑之间的同步操作如下：
+
+
+git pull从远程hexo分支拉取最新的环境文件到本地，可以理解为svn的更新操作。比如在公司写了博客，回家在电脑上也要写需要先执行这一步操作。
+
+文章写完，要发布时，需要先提交环境文件，再发布文章。按以下顺序执行命令：git add .、git commit -m "some descrption"、git push origin hexo、hexo g -d。
 ```
-
-# Have fun ^_^ 
-
-Please [Star](https://github.com/YenYuHsuan/hexo-theme-beantech) this Project if you like it! [Follow](https://github.com/YenYuHsuan) would also be appreciated!
-Peace!
