@@ -290,6 +290,9 @@
           
 
   
+    <div id="gitalk-container"></div>
+
+  
 
 
 
@@ -577,6 +580,23 @@
 
 
 
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="/js/src/md5.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'df59421ecdae52cd04cc',
+          clientSecret: '69e0f9798b0264126544fa7d0ce80e7bff2c5215',
+          repo: 'chenhexiang2017.github.io',
+          owner: 'chenhexiang2017',
+          admin: ['chenhexiang2017'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')
+    </script>
 
 
   
